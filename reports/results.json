@@ -1,0 +1,77 @@
+{
+  "checks": {
+    "rows": 90189,
+    "duplicate_userids": 0,
+    "nulls": 0,
+    "zero_round_players_share": 0.0443,
+    "max_gamerounds": 49854,
+    "p99_gamerounds": 493.0,
+    "srm": {
+      "n_a": 44700,
+      "n_b": 45489,
+      "share_a": 0.495626,
+      "chi2": 6.902405,
+      "p_value": 0.008608
+    }
+  },
+  "metrics": {
+    "retention_1": {
+      "p_a": 0.448188,
+      "p_b": 0.442283,
+      "diff": -0.005905,
+      "ci95": [
+        -0.012393,
+        0.000582
+      ],
+      "z": -1.784086,
+      "p_value": 0.07441,
+      "bootstrap": {
+        "ci95": [
+          -0.012276,
+          0.000612
+        ],
+        "prob_b_worse": 0.961
+      },
+      "relative_change": -0.013176,
+      "mde_80pct_power": 0.009319
+    },
+    "retention_7": {
+      "p_a": 0.190201,
+      "p_b": 0.182,
+      "diff": -0.008201,
+      "ci95": [
+        -0.013282,
+        -0.003121
+      ],
+      "z": -3.164359,
+      "p_value": 0.001554,
+      "bootstrap": {
+        "ci95": [
+          -0.013147,
+          -0.003014
+        ],
+        "prob_b_worse": 0.9986
+      },
+      "relative_change": -0.043119,
+      "mde_80pct_power": 0.007355
+    }
+  },
+  "guardrail_gamerounds": {
+    "median_a": 17.0,
+    "median_b": 16.0,
+    "mean_a": 52.456264,
+    "mean_b": 51.298776,
+    "mann_whitney_p": 0.050209
+  },
+  "robustness_without_outlier_retention_7": {
+    "p_a": 0.190183,
+    "p_b": 0.182,
+    "diff": -0.008183,
+    "ci95": [
+      -0.013263,
+      -0.003103
+    ],
+    "z": -3.15741,
+    "p_value": 0.001592
+  }
+}
