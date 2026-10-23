@@ -28,7 +28,8 @@ level 40? The point of the project is the **process** an analyst should follow:
 ## Run it
 
 ```bash
-pip install pandas numpy scipy statsmodels matplotlib pytest
+pip install -r requirements.txt
+python scripts/get_data.py         # downloads the data, verifies SHA-256
 pytest -q                          # 5 tests: SRM, z-test (checked against statsmodels), bootstrap, MDE
 python analysis/run_analysis.py    # -> reports/results.json + figure
 ```
@@ -53,5 +54,7 @@ python analysis/run_analysis.py    # -> reports/results.json + figure
 3. What is the difference between the MDE and the observed effect, and why does it matter here?
 4. The test shows players leave earlier with gate 40. Why can't you say the gate *caused* boredom?
 
-Data: [Cookie Cats dataset](https://github.com/ryanschaub/Mobile-Games-A-B-Testing-with-Cookie-Cats) (public copy of
-the DataCamp project data), included in `data/` (2.7 MB, SHA-256 prefix `5ab54d761fbddcd5`).
+
+## Data and license
+
+Code: MIT ([LICENSE](LICENSE)). Data: Cookie Cats A/B test data from [ryanschaub/Mobile-Games-A-B-Testing-with-Cookie-Cats](https://github.com/ryanschaub/Mobile-Games-A-B-Testing-with-Cookie-Cats). That repository states no license, so the file is **not** redistributed here: `python scripts/get_data.py` downloads it and checks its SHA-256.

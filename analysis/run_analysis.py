@@ -12,10 +12,10 @@ import pandas as pd
 from scipy import stats as st
 
 matplotlib.use("Agg")
-import matplotlib.pyplot as plt  # noqa: E402
+import matplotlib.pyplot as plt
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from stats import bootstrap_diff, mde_two_proportions, srm_test, two_proportion_z  # noqa: E402
+from stats import bootstrap_diff, mde_two_proportions, srm_test, two_proportion_z
 
 ROOT = Path(__file__).resolve().parents[1]
 INK, MUTED, GRID, A_COL, B_COL = "#1F2937", "#6B7280", "#E5E7EB", "#2563EB", "#DC2626"

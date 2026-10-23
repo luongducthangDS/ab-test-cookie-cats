@@ -3,3 +3,4 @@ __pycache__/
 CV/
 *.pdf
 *.tex
+data/cookie_cats.csv
