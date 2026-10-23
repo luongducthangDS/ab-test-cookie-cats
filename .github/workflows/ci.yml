@@ -18,7 +18,7 @@ jobs:
           cache: "pip"
 
       - name: Install dependencies
-        run: pip install pandas numpy scipy statsmodels matplotlib pytest
+        run: pip install -r requirements.txt
 
       - name: Run Statistical Tests
         run: pytest -q --junitxml=reports/junit.xml
