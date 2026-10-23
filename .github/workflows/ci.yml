@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Lint (ruff)
+        run: pipx run --spec ruff==0.17.2 ruff check .
 
       - name: Setup Python 3.12
         uses: actions/setup-python@v5
@@ -19,6 +21,9 @@ jobs:
 
       - name: Install dependencies
         run: pip install -r requirements.txt
+
+      - name: Download data (checksum-verified)
+        run: python scripts/get_data.py
 
       - name: Run Statistical Tests
         run: pytest -q --junitxml=reports/junit.xml

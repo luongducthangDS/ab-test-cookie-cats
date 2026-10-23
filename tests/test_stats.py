@@ -6,7 +6,7 @@ import pytest
 from statsmodels.stats.proportion import proportions_ztest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "analysis"))
-from stats import bootstrap_diff, mde_two_proportions, srm_test, two_proportion_z  # noqa: E402
+from stats import bootstrap_diff, mde_two_proportions, srm_test, two_proportion_z
 
 
 def test_srm_balanced_split_passes():
